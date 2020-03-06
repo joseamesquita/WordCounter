@@ -24,7 +24,7 @@ namespace WordCounter.Test
     {
       List<string> inputList = new List<string>();
       Word testWord = new Word("cat1", inputList);
-      Assert.AreEqual(false, testWord.CheckWord(testWord.Input));
+      Assert.AreEqual(true, testWord.CheckWord(testWord.Input));
     }
   }
 }
