@@ -27,5 +27,17 @@ namespace WordCounter.Models
       }
       return true;
     }
+
+    public string SplitSentence(string sentence)
+    {
+      string[] newSentence = sentence.Split(' ');
+      string words = "";
+      foreach (string word in newSentence)
+      {
+        words += word + " ";
+      }
+      return words;
+
+    }
   }
 }
