@@ -14,5 +14,18 @@ namespace WordCounter.Models
       Input = word;
       InputList = inputList;
     }
+
+    public bool CheckWord(string word)
+    {
+      foreach (char letter in word)
+      {
+        if (!Char.IsLetter(letter))
+        {
+          return false;
+        }
+        break;
+      }
+      return true;
+    }
   }
 }
