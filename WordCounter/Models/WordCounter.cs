@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WordCounter.Models
 {
@@ -30,21 +31,44 @@ namespace WordCounter.Models
 
     public string SplitSentence(string sentence)
     {
-      string[] newSentence = sentence.Split(' ');
+      List<string> newSentence = sentence.Split(' ').ToList();
       string words = "";
-      foreach (string word in newSentence)
+      for (int i = 0; i < newSentence.Count; i++)
       {
-        if (word == newSentence[newSentence.Length - 1])
+        if (Input == newSentence[newSentence.Count - 1])
         {
-          words += word;
+          words += newSentence[i];
         }
         else
         {
-          words += word + " ";
+          words += newSentence[i] + " ";
         }
       }
       return words;
+      // foreach (string word in newSentence)
+      // {
+      //   if (word == newSentence[newSentence.Count - 1])
+      //   {
+      //     words += word;
+      //   }
+      //   else
+      //   {
+      //     words += word + " ";
+      //   }
+      // }
+      // return words;
 
+    }
+
+    public void WordCount(string sentence)
+    {
+      string count = SplitSentence(sentence);
+      // int quantity = 0;
+      for (int i = 0; i < count.Length; i++)
+      {
+        Console.Write(count[0]);
+      }
+      // return quantity;
     }
   }
 }

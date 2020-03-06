@@ -1,0 +1,14 @@
+using System;
+using WordCounter.Models;
+
+namespace WordCounter
+{
+  public class Program
+  {
+    public static void Main()
+    {
+      Word printSentence = new Word("cat", "welcome cat to the world of cats");
+      printSentence.WordCount(printSentence.Sentence);
+    }
+  }
+}
