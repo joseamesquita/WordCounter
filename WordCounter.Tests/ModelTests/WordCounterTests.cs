@@ -15,15 +15,14 @@ namespace WordCounter.Test
     [TestMethod]
     public void WordConstructor_CreatesInstance_ReturnsString()
     {
-      List<string> inputList = new List<string>();
-      Word testWord = new Word("cat", inputList);
+      Word testWord = new Word("cat", "Hello cat");
       Assert.AreEqual(typeof(Word), testWord.GetType());
     }
     [TestMethod]
     public void CheckWord_ChecksForDigitInWord_ReturnsTrue()
     {
       List<string> inputList = new List<string>();
-      Word testWord = new Word("cat1", inputList);
+      Word testWord = new Word("cat1", "Hello cat");
       Assert.AreEqual(true, testWord.CheckWord(testWord.Input));
     }
   }
