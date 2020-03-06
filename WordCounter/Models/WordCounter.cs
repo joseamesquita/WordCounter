@@ -34,7 +34,14 @@ namespace WordCounter.Models
       string words = "";
       foreach (string word in newSentence)
       {
-        words += word + " ";
+        if (word == newSentence[newSentence.Length - 1])
+        {
+          words += word;
+        }
+        else
+        {
+          words += word + " ";
+        }
       }
       return words;
 
