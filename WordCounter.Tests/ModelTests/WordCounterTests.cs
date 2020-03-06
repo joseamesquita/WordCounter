@@ -21,9 +21,15 @@ namespace WordCounter.Test
     [TestMethod]
     public void CheckWord_ChecksForDigitInWord_ReturnsTrue()
     {
-      List<string> inputList = new List<string>();
       Word testWord = new Word("cat1", "Hello cat");
       Assert.AreEqual(true, testWord.CheckWord(testWord.Input));
+    }
+
+    [TestMethod]
+    public void SplitSentence_SplitsEveryWordIntoArray_ReturnsWords()
+    {
+      Word testSentence = new Word("cat", "welcome cat to the word");
+      Assert.AreEqual("welcome cat to the world", testSentence.SplitSentence(testSentence.Sentence));
     }
   }
 }
