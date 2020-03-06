@@ -5,13 +5,14 @@ namespace WordCounter.Models
 {
   public class Word
   {
-    public string input { get; set; }
-    public List<string> inputList = new List<string>();
+    public string Input { get; set; }
+    public List<string> InputList = new List<string>();
 
 
-    public Word(string word)
+    public Word(string word, List<string> inputList)
     {
-
+      Input = word;
+      InputList = inputList;
     }
   }
 }

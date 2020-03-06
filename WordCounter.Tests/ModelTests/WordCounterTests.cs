@@ -16,7 +16,7 @@ namespace WordCounter.Test
     public void WordConstructor_CreatesInstance_ReturnsString()
     {
       List<string> inputList = new List<string>();
-      Word testWord = new Word(cat, inputList);
+      Word testWord = new Word('cat', inputList);
       Assert.AreEqual(typeof(Word), testWord.GetType());
     }
   }
