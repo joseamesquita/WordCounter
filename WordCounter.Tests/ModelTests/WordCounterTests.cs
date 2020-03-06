@@ -28,7 +28,7 @@ namespace WordCounter.Test
     [TestMethod]
     public void SplitSentence_SplitsEveryWordIntoArray_ReturnsWords()
     {
-      Word testSentence = new Word("cat", "welcome cat to the wod");
+      Word testSentence = new Word("cat", "welcome cat to the world");
       Assert.AreEqual("welcome cat to the world", testSentence.SplitSentence(testSentence.Sentence));
     }
   }
