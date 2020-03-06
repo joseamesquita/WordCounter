@@ -32,6 +32,12 @@ namespace WordCounter.Test
       Assert.AreEqual("welcome cat to the world", testSentence.SplitSentence(testSentence.Sentence));
     }
     [TestMethod]
+    public void CheckWord_ChecksForSpecialCharacters_ReturnsTrue()
+    {
+      Word testWord = new Word("cat", "Hello cat");
+      Assert.AreEqual(true, testWord.CheckWord(testWord.Input));
+    }
+    [TestMethod]
     public void WordCount_CountsTotalNumberWordsInASentence_ReturnsInt()
     {
       Word count = new Word("cat", "wlecome cat to the world of cats in the cat universe.");
