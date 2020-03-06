@@ -19,5 +19,12 @@ namespace WordCounter.Test
       Word testWord = new Word("cat", inputList);
       Assert.AreEqual(typeof(Word), testWord.GetType());
     }
+    [TestMethod]
+    public void CheckWord_ChecksForDigitInWord_ReturnsTrue()
+    {
+      List<string> inputList = new List<string>();
+      Word testWord = new Word("cat1", inputList);
+      Assert.AreEqual(false, testWord.CheckWord(testWord.Input));
+    }
   }
 }
