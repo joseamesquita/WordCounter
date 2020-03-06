@@ -52,15 +52,23 @@ namespace WordCounter.Models
       return String.Join(" ", outcome.ToArray());
     }
 
-    public void WordCount(string sentence)
-    {
-      string count = SplitSentence(sentence);
-      // int quantity = 0;
-      // foreach (string word in count)
-      // {
-      //   Console.Write(count[0]);
-      // }
-      // return quantity;
-    }
+    // public void WordCount(string sentence)
+    // {
+    //   Count = 0;
+    //   string count = SplitSentence(sentence);
+    //   for (int i = 0; i < count.Length; i++)
+    //   {
+    //     if (Input == count[i])
+    //     {
+    //       Count++;
+    //     }
+    //   }
+    //   // int quantity = 0;
+    //   // foreach (string word in count)
+    //   // {
+    //   //   Console.Write(count[0]);
+    //   // }
+    //   // return quantity;
+    // }
   }
 }
