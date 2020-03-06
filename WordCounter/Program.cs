@@ -8,7 +8,9 @@ namespace WordCounter
     public static void Main()
     {
       Word printSentence = new Word("cat", "welcome cat to the world of cats");
-      printSentence.WordCount(printSentence.Sentence);
+      Console.Write(printSentence.SplitSentence(printSentence.Sentence));
+      Console.WriteLine();
+      Console.WriteLine(printSentence.Count);
     }
   }
 }

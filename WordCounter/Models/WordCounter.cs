@@ -9,6 +9,8 @@ namespace WordCounter.Models
     public string Input { get; set; }
     public string Sentence { get; set; }
 
+    public int Count { get; set; }
+
 
     public Word(string word, string sentence)
     {
@@ -31,43 +33,33 @@ namespace WordCounter.Models
 
     public string SplitSentence(string sentence)
     {
-      List<string> newSentence = sentence.Split(' ').ToList();
-      string words = "";
-      for (int i = 0; i < newSentence.Count; i++)
+      string[] newSentence = sentence.Split(' ');
+      List<string> outcome = new List<string>();
+      Count = 0;
+      // string words = "";
+      foreach (string word in newSentence)
       {
-        if (Input == newSentence[newSentence.Count - 1])
+        if (Input == word)
         {
-          words += newSentence[i];
+          outcome.Add(word);
+          Count++;
         }
         else
         {
-          words += newSentence[i] + " ";
+          outcome.Add(word);
         }
       }
-      return words;
-      // foreach (string word in newSentence)
-      // {
-      //   if (word == newSentence[newSentence.Count - 1])
-      //   {
-      //     words += word;
-      //   }
-      //   else
-      //   {
-      //     words += word + " ";
-      //   }
-      // }
-      // return words;
-
+      return String.Join(" ", outcome.ToArray());
     }
 
     public void WordCount(string sentence)
     {
       string count = SplitSentence(sentence);
       // int quantity = 0;
-      for (int i = 0; i < count.Length; i++)
-      {
-        Console.Write(count[0]);
-      }
+      // foreach (string word in count)
+      // {
+      //   Console.Write(count[0]);
+      // }
       // return quantity;
     }
   }
